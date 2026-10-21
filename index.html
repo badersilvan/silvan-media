@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvan Media | High-End Video, Design & Digital Products</title>
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+
+    <!-- PUNKTUELLER AURA-HINTERGRUND -->
+    <div class="bg-aura-wrapper">
+        <div class="aura-spot aura-spot-1"></div>
+        <div class="aura-spot aura-spot-2"></div>
+        <div class="aura-spot aura-spot-3"></div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo Silvan Media ganz links -->
+            <a href="index.html" class="logo">
+    <img src="Images/Logo.png" alt="Silvan Media Logo" class="logo-img">
+</a>
+
+            <!-- Navigations-Links in EXAKTER Reihenfolge: Home, Shop, Projekte, Kontakt -->
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a class="nav-link active" data-page="home" onclick="switchPage('home')">Home</a></li>
+                    <li><a class="nav-link" data-page="shop" onclick="switchPage('shop')">Shop</a></li>
+                    <li><a class="nav-link" data-page="projects" onclick="switchPage('projects')">Projekte</a></li>
+                    <li><a class="nav-link" data-page="contact" onclick="switchPage('contact')">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <!-- Actions: Warenkorb & Mobile Toggle -->
+            <div class="nav-actions">
+                <button class="cart-btn-trigger" onclick="toggleCart()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+                    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HAUPTINHALT (SINGLE PAGE APPLICATION TABS) -->
+    <main>
+
+        <!-- 1. SEITE: HOME -->
+        <section class="page-view active-page" id="page-home">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        High-End Digital Agentur Schweiz
+                    </div>
+                    <h1 class="heading-lg">
+                        <span class="gradient-text">Visuelle Perfektion & Digitale Exzellenz</span>
+                    </h1>
+                    <p class="subtext">
+                        Wir verwandeln Visionen in hochkarätige Videoproduktionen, erstklassiges Webdesign und nachhaltige Branding-Strategien im eleganten tiefschwarzen Design.
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="switchPage('projects')">
+                            Projekte entdecken
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <button class="btn btn-secondary" onclick="switchPage('shop')">Zum Digital Shop</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlights / Statistiken -->
+            <div class="stats-banner">
+                <div>
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Erfolgreiche Projekte</div>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Kundenzufriedenheit</div>
+                </div>
+                <div>
+                    <div class="stat-number">4K+</div>
+                    <div class="stat-label">Kino-Qualität Video</div>
+                </div>
+                <div>
+                    <div class="stat-number">Schweiz</div>
+                    <div class="stat-label">Standort & Präzision</div>
+                </div>
+            </div>
+
+            <!-- Leistungsübersicht -->
+            <div class="page-header" style="margin-top: 5rem;">
+                <h2 class="heading-md">Unsere <span class="gradient-text">Expertise</span></h2>
+                <p class="subtext">Ganzheitliche Medienlösungen aus einer Hand.</p>
+            </div>
+
+            <div class="grid-layout">
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                        </div>
+                        <h3 class="card-title">Videoproduktion</h3>
+                        <p class="card-text">Imagefilme, Werbespots und Social-Media-Content in gestochen scharfer 4K-Auflösung und emotionalem Storytelling.</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="switchPage('contact')" style="width: 100%;">Projekt anfragen</button>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3 class="card-title">Webdesign & UI/UX</h3>
+                        <p class="card-text">Moderne, ultraschnelle Websites im Dark-Aura Look. Perfekt optimiert für Mobilgeräte und hohe Conversions.</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="switchPage('contact')" style="width: 100%;">Projekt anfragen</button>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h3 class="card-title">Content Creation & Branding</h3>
+                        <p class="card-text">Einzigartige visuelle Identitäten, Markenstrategien und maßgeschneiderter Content für alle digitalen Kanäle.</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="switchPage('contact')" style="width: 100%;">Projekt anfragen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SEITE: SHOP -->
+        <section class="page-view" id="page-shop">
+            <div class="page-header">
+                <div class="badge">Digital Store</div>
+                <h2 class="heading-lg">Exklusive <span class="gradient-text">Medien- & Design-Assets</span></h2>
+                <p class="subtext">Professionelle LUTs, Templates und Kurse für Creators & Agenturen.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-chip active" onclick="filterShop('all', this)">Alle Produkte</button>
+                <button class="filter-chip" onclick="filterShop('luts', this)">LUTs & Presets</button>
+                <button class="filter-chip" onclick="filterShop('templates', this)">Templates</button>
+                <button class="filter-chip" onclick="filterShop('courses', this)">Videokurse</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid-layout" id="shopGrid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="luts">
+                    <div class="product-thumb">
+                        <span class="product-badge">Besteller</span>
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 18a6 6 0 0 0 0-12v12z"/></svg>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="card-title">Cinematic Aura LUT Pack</h3>
+                        <p class="card-text">12 professionelle Color-Grading Presets für DaVinci Resolve, Premiere Pro & Final Cut.</p>
+                        <div class="product-price">CHF 39.00</div>
+                        <div class="btn-group" style="margin-top: auto;">
+                            <button class="btn btn-secondary" onclick="openProductModal('Cinematic Aura LUT Pack', 'CHF 39.00', 'Ein Bundle aus 12 hochwertigen 3D-LUTs, entwickelt für cinematic Farbtöne mit tiefen Blauschatten und warmen Hauttönen. Enthält .cube Dateien sowie PDF-Anleitung.')" style="flex:1;">Details</button>
+                            <button class="btn btn-primary" onclick="addToCart('Cinematic Aura LUT Pack', 39)" style="flex:1;">Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="templates">
+                    <div class="product-thumb">
+                        <span class="product-badge">Neu</span>
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="card-title">Social Media Master Grid</h3>
+                        <p class="card-text">30 editierbare Canva- & Figma-Vorlagen im edlen Dark-Glow Stil für Instagram & LinkedIn.</p>
+                        <div class="product-price">CHF 29.00</div>
+                        <div class="btn-group" style="margin-top: auto;">
+                            <button class="btn btn-secondary" onclick="openProductModal('Social Media Master Grid', 'CHF 29.00', 'Optimiert für maximale Reichweite und edle Markenpräsenz. Beinhaltet Carousel-Templates, Story-Hooks und Post-Grids in Figma und Canva Format.')" style="flex:1;">Details</button>
+                            <button class="btn btn-primary" onclick="addToCart('Social Media Master Grid', 29)" style="flex:1;">Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="courses">
+                    <div class="product-thumb">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="card-title">Video Lighting Masterclass</h3>
+                        <p class="card-text">3 Stunden Intensiv-Videokurs: Professionelles Licht-Setup mit minimalem Equipment.</p>
+                        <div class="product-price">CHF 89.00</div>
+                        <div class="btn-group" style="margin-top: auto;">
+                            <button class="btn btn-secondary" onclick="openProductModal('Video Lighting Masterclass', 'CHF 89.00', 'Lerne Schritt für Schritt, wie du cinematische Ausleuchtung für Interviews, Commercials und Youtube-Videos erzielst. Inklusive downloadable Light-Maps.')" style="flex:1;">Details</button>
+                            <button class="btn btn-primary" onclick="addToCart('Video Lighting Masterclass', 89)" style="flex:1;">Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="templates">
+                    <div class="product-thumb">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="card-title">Aura Web Template</h3>
+                        <p class="card-text">Responsive HTML5/Tailwind Single & Multi-Page Template mit Aura-Glow Effekten.</p>
+                        <div class="product-price">CHF 69.00</div>
+                        <div class="btn-group" style="margin-top: auto;">
+                            <button class="btn btn-secondary" onclick="openProductModal('Aura Web Template', 'CHF 69.00', 'Vollständig anpassbare Codebase. Perfekt für Agenturen, Freelancer und Tech-Startups, die ein dunkles, edles Design suchen.')" style="flex:1;">Details</button>
+                            <button class="btn btn-primary" onclick="addToCart('Aura Web Template', 69)" style="flex:1;">Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEITE: PROJEKTE -->
+        <section class="page-view" id="page-projects">
+            <div class="page-header">
+                <div class="badge">Portfolio</div>
+                <h2 class="heading-lg">Ausgewählte <span class="gradient-text">Meisterwerke</span></h2>
+                <p class="subtext">Ein Einblick in unsere jüngsten Videoproduktionen und Digitalprojekte.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-chip active" onclick="filterProjects('all', this)">Alle Arbeiten</button>
+                <button class="filter-chip" onclick="filterProjects('video', this)">Video</button>
+                <button class="filter-chip" onclick="filterProjects('web', this)">Webdesign</button>
+                <button class="filter-chip" onclick="filterProjects('branding', this)">Branding</button>
+            </div>
+
+            <div class="grid-layout" id="projectGrid">
+                <!-- Project 1 -->
+                <div class="card" data-category="video">
+                    <div class="project-thumb">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Videoproduktion</span>
+                        <span class="tag">Commercial</span>
+                    </div>
+                    <h3 class="card-title">Apex Automotive Brand Film</h3>
+                    <p class="card-text">Ein hochemotionaler Kinospot für eine Schweizer Luxus-Automarke im alpine Nachtdesign.</p>
+                    <button class="btn btn-secondary" onclick="openProjectModal('Apex Automotive Brand Film', 'Videoproduktion & Commercial', 'Für den Kunden Apex Automotive wurde ein 60-sekündiger Kinospot produziert. Von der Skripterstellung über Nachtdrehs in den Schweizer Alpen bis hin zum Color Grading und Sound-Design im eigenen Studio.')">Projekt-Details</button>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card" data-category="web">
+                    <div class="project-thumb">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Webdesign</span>
+                        <span class="tag">SaaS Platform</span>
+                    </div>
+                    <h3 class="card-title">Aether Analytics Portal</h3>
+                    <p class="card-text">Ultra-moderne SaaS Landingpage mit interaktiven Datenvisualisierungen und Dark-Mode UI.</p>
+                    <button class="btn btn-secondary" onclick="openProjectModal('Aether Analytics Portal', 'Webdesign & UI/UX', 'Relaunch des Webportals für Aether Analytics. Dank schlankem Code und individuellem Aura-Design konnte die Conversion-Rate um 42% gesteigert werden.')">Projekt-Details</button>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card" data-category="branding">
+                    <div class="project-thumb">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Branding</span>
+                        <span class="tag">Content Strategy</span>
+                    </div>
+                    <h3 class="card-title">Verve Watches Identity</h3>
+                    <p class="card-text">Ganzheitliches Rebranding inklusive Markenbuch, Typografie-Konzept und Social Campaign.</p>
+                    <button class="btn btn-secondary" onclick="openProjectModal('Verve Watches Identity', 'Branding & Identität', 'Umfassendes Branding für die Schweizer Uhrenmanufaktur Verve. Entwicklung des neuen Logos, Farbschemas und Produktion von Social Media Content für 12 Monate.')">Projekt-Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEITE: KONTAKT -->
+        <section class="page-view" id="page-contact">
+            <div class="page-header">
+                <div class="badge">In Kontakt treten</div>
+                <h2 class="heading-lg">Starten wir Ihr <span class="gradient-text">neues Projekt</span></h2>
+                <p class="subtext">Wir freuen uns darauf, von Ihrer Idee zu hören. Antworten erfolgen garantiert innerhalb von 24h.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Kontaktdaten -->
+                <div class="contact-box">
+                    <h3 class="card-title" style="margin-bottom: 1.8rem;">Kontaktdaten</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">Telefon Schweiz</div>
+                            <div class="subtext" style="font-size: 0.9rem;">+41 (0) 44 123 45 67</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">E-Mail</div>
+                            <div class="subtext" style="font-size: 0.9rem;">kontakt@silvanmedia.ch</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">Standort</div>
+                            <div class="subtext" style="font-size: 0.9rem;">Silvan Media Studio<br>Zürich / Bern, Schweiz</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formular mit Validierung -->
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Ihr Name *</label>
+                        <input type="text" id="contactName" class="form-input" placeholder="z. B. Marc Muster" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">E-Mail Adresse *</label>
+                        <input type="email" id="contactEmail" class="form-input" placeholder="marc@beispiel.ch" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Gewünschte Leistung</label>
+                        <select class="form-input" id="contactService">
+                            <option>Videoproduktion</option>
+                            <option>Webdesign & UI/UX</option>
+                            <option>Content Creation & Branding</option>
+                            <option>Digital Product Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ihre Nachricht *</label>
+                        <textarea id="contactMessage" class="form-textarea" placeholder="Beschreiben Sie kurz Ihr Vorhaben..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Anfrage Absenden</button>
+                </form>
+            </div>
+
+            <!-- FAQ Akkordeon -->
+            <div class="faq-section">
+                <div class="page-header" style="margin-bottom: 2rem;">
+                    <h3 class="heading-md">Häufig gestellte Fragen (FAQ)</h3>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Wie läuft ein Videoproduktions-Projekt ab?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        Wir starten mit einem unverbindlichen Beratungsgespräch, erstellen ein detailliertes Skript/Storyboard, führen den Dreh mit professioneller 4K-Ausrüstung durch und kümmern uns um Postproduktion, Schnitt, Color Grading und Sounddesign.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Wie schnell erhalte ich digitale Shop-Käufe?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        Sofort! Alle digitalen Produkte (LUTs, Templates, Kurszugänge) stehen direkt nach Zahlungseingang als Download per E-Mail zur Verfügung.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Arbeitet Silvan Media auch international?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-body">
+                        Ja! Unser Hauptsitz ist in der Schweiz, jedoch führen wir Videodrehs und Webdesign-Projekte im gesamten DACH-Raum und international durch.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- WARENKORB DRAWER OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3 class="card-title" style="margin: 0;">Warenkorb</h3>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <div class="subtext" style="text-align: center; margin-top: 2rem;">Ihr Warenkorb ist leer.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Gesamtsumme:</span>
+                <span id="cartTotalSum">CHF 0.00</span>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()" style="width: 100%;">Zur Kasse gehen</button>
+        </div>
+    </div>
+
+    <!-- DETAIL & LEGAL MODAL OVERLAY -->
+    <div class="modal" id="modalWindow">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="heading-md" id="modalTitle">Modal Titel</h2>
+            <div class="modal-body" id="modalBody">Modal Inhalt...</div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div class="toast" id="toastNotification">Erfolgreich hinzugefügt!</div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="subtext" style="font-size: 0.9rem;">
+                &copy; 2026 Silvan Media. Alle Rechte vorbehalten. Made in Switzerland.
+            </div>
+            <div class="footer-links">
+                <a onclick="openLegalModal('impressum')">Impressum</a>
+                <a onclick="openLegalModal('datenschutz')">Datenschutz</a>
+                <a onclick="openLegalModal('agb')">AGB</a>
+                <a onclick="showToast('Cookie-Einstellungen auf optimal gesetzt.')">Cookie-Einstellungen</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERAKTIVE JAVASCRIPT LOGIK -->
+    <script>
+        // --- 1. DYNAMIC PAGE SWITCHER (Multi-Page Tabs) ---
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const targetPage = document.getElementById(`page-${pageId}`);
+            if (targetPage) {
+                targetPage.classList.add('active-page');
+            }
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            document.getElementById('navMenu').classList.remove('mobile-active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- 2. MOBILE MENU TOGGLE ---
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+        });
+
+        // --- 3. WARENKORB LOGIK ---
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cartOverlay').classList.toggle('active');
+            document.getElementById('cartDrawer').classList.toggle('active');
+        }
+
+        function addToCart(title, price) {
+            cart.push({ title, price });
+            updateCartUI();
+            showToast(`"${title}" zum Warenkorb hinzugefügt!`);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cartCount');
+            const container = document.getElementById('cartItemsContainer');
+            const totalEl = document.getElementById('cartTotalSum');
+
+            countEl.textContent = cart.length;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<div class="subtext" style="text-align: center; margin-top: 2rem;">Ihr Warenkorb ist leer.</div>';
+                totalEl.textContent = 'CHF 0.00';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = '';
+            cart.forEach((item, index) => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <div>
+                        <div class="cart-item-title">${item.title}</div>
+                        <div class="cart-item-price">CHF ${item.price.toFixed(2)}</div>
+                    </div>
+                    <button style="background:none; border:none; color:var(--text-muted); cursor:pointer;" onclick="removeFromCart(${index})">&times;</button>
+                `;
+                container.appendChild(div);
+            });
+
+            totalEl.textContent = `CHF ${total.toFixed(2)}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                showToast('Ihr Warenkorb ist leer!');
+                return;
+            }
+            showToast('Weiterleitung zur sicheren Kasse...');
+            setTimeout(() => {
+                cart = [];
+                updateCartUI();
+                toggleCart();
+                showToast('Vielen Dank für Ihren Test-Kauf!');
+            }, 1500);
+        }
+
+        // --- 4. FILTER FUNKTIONEN (Shop & Projekte) ---
+        function filterShop(category, btn) {
+            const chips = btn.parentElement.querySelectorAll('.filter-chip');
+            chips.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+
+            const products = document.querySelectorAll('#shopGrid .product-card');
+            products.forEach(prod => {
+                if (category === 'all' || prod.getAttribute('data-category') === category) {
+                    prod.style.display = 'flex';
+                } else {
+                    prod.style.display = 'none';
+                }
+            });
+        }
+
+        function filterProjects(category, btn) {
+            const chips = btn.parentElement.querySelectorAll('.filter-chip');
+            chips.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+
+            const projects = document.querySelectorAll('#projectGrid .card');
+            projects.forEach(proj => {
+                if (category === 'all' || proj.getAttribute('data-category') === category) {
+                    proj.style.display = 'flex';
+                } else {
+                    proj.style.display = 'none';
+                }
+            });
+        }
+
+        // --- 5. MODAL SYSTEM (Produkt & Projekt Detail) ---
+        function openModal(title, contentHtml) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalBody').innerHTML = contentHtml;
+            document.getElementById('modalWindow').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modalWindow').classList.remove('active');
+        }
+
+        function openProductModal(title, price, description) {
+            const html = `
+                <p style="font-size: 1.3rem; font-weight:700; color:var(--blue-electric); margin-bottom: 1rem;">${price}</p>
+                <p style="margin-bottom: 1.5rem;">${description}</p>
+                <h3>Features & Highlights:</h3>
+                <ul style="margin: 0.8rem 0 1.8rem 1.2rem;">
+                    <li>Sofortiger Download per E-Mail</li>
+                    <li>Kommerziell nutzbare Lizenz</li>
+                    <li>Kostenlose Updates inklusive</li>
+                </ul>
+                <button class="btn btn-primary" onclick="addToCart('${title}', parseInt('${price}'.replace(/[^0-9]/g, ''))); closeModal();">In den Warenkorb</button>
+            `;
+            openModal(title, html);
+        }
+
+        function openProjectModal(title, category, description) {
+            const html = `
+                <p style="color:var(--blue-electric); font-weight:600; margin-bottom: 1rem;">${category}</p>
+                <p style="margin-bottom: 1.5rem;">${description}</p>
+                <h3>Ergebnis & Impact:</h3>
+                <p>Das Projekt erzielte maximale Aufmerksamkeit und beste Kundenbewertungen.</p>
+            `;
+            openModal(title, html);
+        }
+
+        // --- 6. RECHTSTEXTE MODALS (Footer Links) ---
+        function openLegalModal(type) {
+            if (type === 'impressum') {
+                openModal('Impressum', `
+                    <h3>Angaben gemäß Schweizer Recht & DSGVO</h3>
+                    <p><strong>Silvan Media Studio</strong><br>Musterstrasse 12<br>8000 Zürich, Schweiz</p>
+                    <p><strong>Vertreten durch:</strong> Silvan Media Team</p>
+                    <p><strong>Kontakt:</strong><br>Telefon: +41 (0) 44 123 45 67<br>E-Mail: kontakt@silvanmedia.ch</p>
+                    <p><strong>Haftungsausschluss:</strong> Urheberrechte für Inhalte liegen bei Silvan Media. Jegliche Vervielfältigung erfordert eine schriftliche Zustimmung.</p>
+                `);
+            } else if (type === 'datenschutz') {
+                openModal('Datenschutzerklärung', `
+                    <h3>1. Datenschutz auf einen Blick</h3>
+                    <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften behandelt.</p>
+                    <h3>2. Datenerfassung auf dieser Website</h3>
+                    <p>Ihre Daten werden einerseits dadurch erhoben, dass Sie uns diese mitteilen (z. B. im Kontaktformular). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst.</p>
+                `);
+            } else if (type === 'agb') {
+                openModal('Allgemeine Geschäftsbedingungen (AGB)', `
+                    <h3>1. Geltungsbereich</h3>
+                    <p>Für alle Lieferungen und Dienstleistungen von Silvan Media an Verbraucher und Unternehmer gelten diese AGB.</p>
+                    <h3>2. Digitale Produkte & Downloads</h3>
+                    <p>Mit dem Kauf digitaler Inhalte (LUTs, Templates) erlischt das Widerrufsrecht, sobald der Download-Link bereitgestellt wurde.</p>
+                `);
+            }
+        }
+
+        // --- 7. FAQ ACCORDION LOGIK ---
+        function toggleFaq(header) {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // --- 8. FORMULAR VALIDIERUNG ---
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            showToast('Nachricht erfolgreich gesendet! Wir melden uns.');
+            event.target.reset();
+        }
+
+        // --- 9. TOAST NOTIFICATION ---
+        function showToast(message) {
+            const toast = document.getElementById('toastNotification');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
