@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte | Silvan Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <span class="logo-part"><span class="logo-script">S</span>ilvan</span>
+                <span class="logo-part"><span class="logo-script">M</span>edia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="projekte.html" class="nav-link active">Projekte</a></li>
+                    <li><a href="index.html#kontakt" class="nav-link nav-contact-btn">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü" onclick="document.getElementById('navMenu').classList.toggle('mobile-active')">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- INHALT PROJEKTE -->
+    <main style="max-width: 1350px; margin: 60px auto 4rem auto; padding: 0 2rem; width: 100%;">
+        <div style="text-align: center;">
+            <div class="badge-custom">Portfolio</div>
+            <h1 class="heading-lg">Meine Projekte</h1>
+            <p class="subtext">Hier findest du in Kürze eine Auswahl meiner besten Sport- und Medien-Projekte.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="subtext" style="font-size: 0.95rem;">&copy; 2026 Silvan Media. Alle Rechte vorbehalten.</div>
+    </footer>
+
+</body>
+</html>

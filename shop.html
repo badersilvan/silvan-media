@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Silvan Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <span class="logo-part"><span class="logo-script">S</span>ilvan</span>
+                <span class="logo-part"><span class="logo-script">M</span>edia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+                    <li><a href="index.html#kontakt" class="nav-link nav-contact-btn">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü" onclick="document.getElementById('navMenu').classList.toggle('mobile-active')">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- COMING SOON INHALT -->
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+        <div>
+            <div class="badge-custom">Digital Store</div>
+            <h1 class="heading-lg" style="font-size: clamp(3.5rem, 10vw, 7rem); color: #ffffff; margin: 1rem 0;">
+                Coming Soon...
+            </h1>
+            <p class="subtext" style="max-width: 500px; margin: 0 auto 2.5rem auto;">
+                Mein Shop mit exklusiven Presets, Vorlagen und Inhalten befindet sich aktuell im Aufbau.
+            </p>
+            <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="subtext" style="font-size: 0.95rem;">&copy; 2026 Silvan Media. Alle Rechte vorbehalten.</div>
+    </footer>
+
+</body>
+</html>
