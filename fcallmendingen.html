@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Allmendingen | Silvan Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <span class="logo-word"><span class="logo-script">S</span>ilvan</span>
+                <span class="logo-word"><span class="logo-script">M</span>edia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="projekte.html" class="nav-link active">Projekte</a></li>
+                    <li><a href="index.html#kontakt" class="nav-link nav-contact-btn">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menü" onclick="document.getElementById('navMenu').classList.toggle('mobile-active')">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- INHALT DETAILSEITE FC ALLMENDINGEN -->
+    <main style="max-width: 1350px; margin: 40px auto 4rem auto; padding: 0 2rem; width: 100%;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="badge-custom">Projekt Details</div>
+            <h1 class="heading-lg">FC Allmendingen</h1>
+        </div>
+
+        <!-- BILD HINTERGRUND -->
+        <div style="max-width: 1000px; margin: 0 auto; min-height: 450px; border-radius: 24px; border: 2px solid #000; overflow: hidden; background: url('Images/B-Cup-30.jpg') no-repeat center center / cover;"></div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="projekte.html" class="btn btn-primary">Zurück zu den Projekten</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="subtext" style="font-size: 0.95rem;">&copy; 2026 Silvan Media. Alle Rechte vorbehalten.</div>
+    </footer>
+
+</body>
+</html>
