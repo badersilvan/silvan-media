@@ -40,7 +40,7 @@ body {
 }
 
 /* ==========================================================================
-   2. HINTERGRUNDBILDSCHIRM (Person & Stutzen weiter unten im Sichtfeld)
+   2. HINTERGRUNDBILDSCHIRM
    ========================================================================== */
 .hero-bg-container {
     position: absolute;
@@ -50,13 +50,13 @@ body {
     height: 100vh;
     z-index: -2;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgba(14, 14, 18, 0.05) 0%, rgba(14, 14, 18, 0.55) 80%, #0e0e12 100%), 
-                linear-gradient(to right, rgba(14, 14, 18, 0.75) 0%, rgba(14, 14, 18, 0.05) 45%, rgba(14, 14, 18, 0.75) 100%), 
-                url('Images/B-Cup-30.jpg') no-repeat center 52% / cover;
+    background: linear-gradient(to bottom, rgba(14, 14, 18, 0.1) 0%, rgba(14, 14, 18, 0.65) 75%, #0e0e12 100%), 
+                linear-gradient(to right, rgba(14, 14, 18, 0.8) 0%, rgba(14, 14, 18, 0.1) 45%, rgba(14, 14, 18, 0.8) 100%), 
+                url('Images/B-Cup-30.jpg') no-repeat center 38% / cover;
 }
 
 /* ==========================================================================
-   3. NAVIGATION & LOGO
+   3. NAVIGATION & LOGO (Verhindert Überschneidungen und hält es sauber)
    ========================================================================== */
 .header {
     position: fixed;
@@ -83,7 +83,7 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
-    white-space: nowrap;
+    white-space: nowrap; /* Verhindert das Umbrechen / Überschneiden */
 }
 
 .logo-word {
@@ -96,6 +96,7 @@ body {
     align-items: baseline;
 }
 
+/* Detaillierte S & M Buchstabengestaltung ohne Überschneidung */
 .logo-script {
     font-family: var(--font-script-logo);
     font-size: 3.2rem;
