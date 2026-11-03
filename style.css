@@ -84,6 +84,7 @@ body {
     align-items: center;
     gap: 14px;
     white-space: nowrap;
+    background: transparent; /* Transparent, damit man den Hintergrund sieht */
 }
 
 .logo-word {
@@ -343,8 +344,8 @@ main {
    ========================================================================== */
 @media (max-width: 900px) {
     .header {
-        background: #0e0e12 !important; /* Gleiche Farbe wie der untere Webseiten-Hintergrund */
-        padding: 0.8rem 0;
+        background: transparent !important; /* Header bleibt transparent, damit das Logo im Hintergrund transparent ist */
+        padding: 0.6rem 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -353,31 +354,39 @@ main {
 
     .nav-container {
         padding: 0 1rem;
-        flex-direction: row-reverse; /* Burger-Menu nach rechts, Logo nach links daneben */
-        justify-content: space-between;
+        display: flex;
+        justify-content: space-between; /* Logo links, Burger-Menü rechts */
+        align-items: center;
+        position: relative;
     }
 
     .logo-box {
-        transform: scale(0.85); /* Etwas kompakter für mobile Bildschirme */
+        transform: scale(0.75);
         transform-origin: left center;
+        background: transparent !important; /* Absolut transparent */
     }
 
     .menu-toggle {
         display: block;
+        background: #0e0e12; /* Fester Hintergrund für den Button oben rechts bündig */
+        padding: 6px;
+        border-radius: 8px;
+        z-index: 1002;
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 0; /* Ganz oben bündig */
         left: 0;
         width: 100%;
-        background: #0e0e12; /* Nicht transparent, gleiche Farbe wie Webseiten-Hintergrund */
+        background: #0e0e12; /* Nicht transparent, exakte Farbe des unteren Teils */
         flex-direction: column;
-        padding: 2rem 1.5rem;
+        padding: 5rem 1.5rem 2rem 1.5rem; /* Platzhalter oben, damit das Menü unter dem Logo/Button beginnt */
         gap: 1.5rem;
         transform: translateY(-150%);
         transition: var(--transition-smooth);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1001; /* Hinter dem Burger-Icon, aber über dem Rest */
     }
 
     .nav-menu.mobile-active {
@@ -390,7 +399,6 @@ main {
         gap: 0;
     }
 
-    /* Entfernt das Instagram-Logo und den Link im mobilen Menü komplett */
     .nav-contact-subwrap {
         display: none !important;
     }
