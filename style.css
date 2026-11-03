@@ -40,7 +40,7 @@ body {
 }
 
 /* ==========================================================================
-   2. HINTERGRUNDBILDSCHIRM (Bildposition fix, Übergang wandert nach unten zu den Knien)
+   2. HINTERGRUNDBILDSCHIRM
    ========================================================================== */
 .hero-bg-container {
     position: absolute;
@@ -52,7 +52,7 @@ body {
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(14, 14, 18, 0.02) 0%, rgba(14, 14, 18, 0.1) 65%, rgba(14, 14, 18, 0.9) 88%, #0e0e12 100%), 
                 linear-gradient(to right, rgba(14, 14, 18, 0.75) 0%, rgba(14, 14, 18, 0.02) 45%, rgba(14, 14, 18, 0.75) 100%), 
-                url('Images/B-Cup-30.jpg') no-repeat center 28% / cover;
+                url('Images/B-Cup-30.jpg') no-repeat center 5% / cover;
 }
 
 /* ==========================================================================
@@ -256,7 +256,6 @@ main {
     background: #e2e2e2;
 }
 
-/* Zentrierte Buttons für den kompakteren Kontakt-Bereich */
 .btn-secondary-centered {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.85) 85%);
     color: var(--text-white);
@@ -339,20 +338,46 @@ main {
     text-align: center;
 }
 
+/* ==========================================================================
+   5. TABLET & HANDY OPTIMIERUNG (<= 900px)
+   ========================================================================== */
 @media (max-width: 900px) {
-    .menu-toggle { display: block; }
+    .header {
+        background: #0e0e12 !important; /* Gleiche Farbe wie der untere Webseiten-Hintergrund */
+        padding: 0.8rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+        flex-direction: row-reverse; /* Burger-Menu nach rechts, Logo nach links daneben */
+        justify-content: space-between;
+    }
+
+    .logo-box {
+        transform: scale(0.85); /* Etwas kompakter für mobile Bildschirme */
+        transform-origin: left center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 
     .nav-menu {
         position: fixed;
-        top: 85px;
+        top: 70px;
         left: 0;
         width: 100%;
-        background: rgba(14, 14, 18, 0.98);
+        background: #0e0e12; /* Nicht transparent, gleiche Farbe wie Webseiten-Hintergrund */
         flex-direction: column;
-        padding: 2.5rem 1.5rem;
-        gap: 1.8rem;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
         transform: translateY(-150%);
         transition: var(--transition-smooth);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-menu.mobile-active {
@@ -360,7 +385,13 @@ main {
     }
 
     .nav-contact-item {
+        display: flex;
         flex-direction: column;
-        gap: 1.8rem;
+        gap: 0;
+    }
+
+    /* Entfernt das Instagram-Logo und den Link im mobilen Menü komplett */
+    .nav-contact-subwrap {
+        display: none !important;
     }
 }
